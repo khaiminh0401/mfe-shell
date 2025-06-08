@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MfeShell</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@angular/core": "https://cdn.jsdelivr.net/npm/@angular/core@20.0.2/+esm",
+        "@angular/common": "https://cdn.jsdelivr.net/npm/@angular/common@20.0.2/+esm",
+        "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@angular/platform-browser@20.0.2/+esm",
+        "single-spa-angular": "https://cdn.jsdelivr.net/npm/single-spa-angular@7.0.0/+esm",
+        "mfe-auth": "http://localhost:4201/main.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    window.onload = () => {
+      importMapOverrides.enableUI();
+    };
+
+    // Initialize SystemJS
+    System.import('mfe-auth').then((module) => {
+      console.log('Loaded mfe-auth:', module);
+    }).catch((error) => {
+      console.error('Error loading mfe-auth:', error);
+    });
+  </script>
+</body>
+</html>
