@@ -71,8 +71,12 @@
             "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
-            "production": {},
-            "development": {}
+            "production": {
+              "buildTarget": "mfe-shell:build:production"
+            },
+            "development": {
+              "buildTarget": "mfe-shell:build:development"
+            }
           },
           "defaultConfiguration": "development"
         },

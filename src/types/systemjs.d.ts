@@ -1,1 +1,3 @@
-declare module 'systemjs';
+declare const System: {
+  import: (module: string) => Promise<any>;
+};

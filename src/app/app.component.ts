@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <h1>Welcome to MFE Shell</h1>
+    <div id="single-spa-container"></div>
+  `,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'mfe-shell';

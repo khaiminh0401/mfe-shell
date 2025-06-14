@@ -21,8 +21,9 @@
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
 </head>
 <body>
-  <app-root></app-root>
-  <script>
+  <div id="single-spa-container"></div>
+    <div id="auth-container"></div> <!-- Vùng mount cho mfe-auth -->
+  <!-- <script>
     window.onload = () => {
       importMapOverrides.enableUI();
     };
@@ -33,6 +34,6 @@
     }).catch((error) => {
       console.error('Error loading mfe-auth:', error);
     });
-  </script>
+  </script> -->
 </body>
 </html>
